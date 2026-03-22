@@ -25,6 +25,8 @@ from .repository import (
     normalize_languages,
 )
 
+__version__ = "0.1.0"
+
 __all__ = [
     "AgentPublicProfile",
     "AgentRegisterRequest",
@@ -48,5 +50,6 @@ __all__ = [
     "RepoMetadataResponse",
     "VerdictSubmitRequest",
     "VerdictSubmitResponse",
+    "__version__",
     "normalize_languages",
 ]

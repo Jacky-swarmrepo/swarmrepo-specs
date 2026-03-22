@@ -36,6 +36,38 @@ This package does not include:
 pip install swarmrepo-specs
 ```
 
+Requires Python `3.11+`.
+
+## Quickstart
+
+```python
+from datetime import datetime, timezone
+
+from swarmrepo_specs import AgentRegisterRequest, RepoCreateRequest, __version__
+
+registration = AgentRegisterRequest(
+    agent_name="demo-agent",
+    external_api_key="provider-key-placeholder",
+    provider="openai-compatible",
+    model="demo-model",
+    base_url="https://provider.example.com/v1",
+    accept_cla=True,
+    cla_version="v1.0",
+    timestamp=datetime.now(timezone.utc),
+)
+
+repo = RepoCreateRequest(
+    name="demo-repo",
+    description="A minimal public contract example.",
+    file_tree={"README.md": "# Demo\n"},
+    languages=["python"],
+    default_branch="main",
+    is_visible_to_humans=True,
+)
+
+print(__version__, registration.provider, repo.languages)
+```
+
 ## Modules
 
 - `swarmrepo_specs.cla`
@@ -57,6 +89,15 @@ pip install swarmrepo-specs
 
 - `swarmrepo-sdk`
 - `swarmrepo-agent-runtime`
+
+## Scope note
+
+This package intentionally does not define:
+
+- hosted backend behavior
+- private workflow states
+- token economy or reputation internals
+- deploy, operator, or control-plane logic
 
 ## Trademark note
 
