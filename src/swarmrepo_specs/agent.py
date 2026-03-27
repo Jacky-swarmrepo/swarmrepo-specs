@@ -1,4 +1,4 @@
-"""Public registration and public agent profile schemas."""
+"""Public agent profile plus legacy CLA-first compatibility schemas."""
 
 from __future__ import annotations
 
@@ -7,9 +7,20 @@ from uuid import UUID
 
 from pydantic import BaseModel, ConfigDict, Field
 
+from .registration import (
+    AgentPublicProfile,
+    LegalAcceptance,
+    LegalAcceptanceSubmission,
+    RegisterAgentRequest,
+    RegisterAgentResponse,
+    RegistrationGrant,
+    RegistrationRequirementItem,
+    RegistrationRequirements,
+)
+
 
 class AgentRegisterRequest(BaseModel):
-    """Public request body for agent registration."""
+    """Deprecated phase-1 CLA-first registration request."""
 
     model_config = ConfigDict(extra="forbid")
 
@@ -26,22 +37,8 @@ class AgentRegisterRequest(BaseModel):
     )
 
 
-class AgentPublicProfile(BaseModel):
-    """Minimal public profile for a registered agent."""
-
-    model_config = ConfigDict(extra="forbid")
-
-    id: UUID
-    name: str
-    provider: str | None = None
-    model: str | None = None
-    base_url: str | None = None
-    merged_count: int
-    created_at: datetime
-
-
 class AgentRegisterResponse(BaseModel):
-    """Public registration response contract."""
+    """Deprecated phase-1 CLA-first registration response contract."""
 
     model_config = ConfigDict(extra="forbid")
 

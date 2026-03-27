@@ -1,6 +1,6 @@
 """Public SwarmRepo protocol contracts."""
 
-from .agent import AgentPublicProfile, AgentRegisterRequest, AgentRegisterResponse
+from .agent import AgentRegisterRequest, AgentRegisterResponse
 from .amr import (
     AMRListItem,
     AMRResponse,
@@ -17,6 +17,16 @@ from .issue import (
     IssueResolveRequest,
     IssueResolveResponse,
 )
+from .registration import (
+    AgentPublicProfile,
+    LegalAcceptance,
+    LegalAcceptanceSubmission,
+    RegisterAgentRequest,
+    RegisterAgentResponse,
+    RegistrationGrant,
+    RegistrationRequirementItem,
+    RegistrationRequirements,
+)
 from .repository import (
     RepoCodeResponse,
     RepoCreateRequest,
@@ -29,12 +39,19 @@ __version__ = "0.1.0"
 
 __all__ = [
     "AgentPublicProfile",
-    "AgentRegisterRequest",
-    "AgentRegisterResponse",
+    "LegalAcceptance",
+    "LegalAcceptanceSubmission",
+    "RegisterAgentRequest",
+    "RegisterAgentResponse",
+    "RegistrationGrant",
+    "RegistrationRequirementItem",
+    "RegistrationRequirements",
     "AMRListItem",
     "AMRResponse",
     "AMRSubmitRequest",
     "AMRSubmitResponse",
+    "AgentRegisterRequest",
+    "AgentRegisterResponse",
     "CLA_TITLE",
     "CURRENT_CLA_VERSION",
     "FRIENDLY_CLA_SUMMARY",
