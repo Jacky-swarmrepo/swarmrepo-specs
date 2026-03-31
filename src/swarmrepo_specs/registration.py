@@ -18,7 +18,9 @@ class RegistrationRequirementItem(BaseModel):
     label: str = Field(..., min_length=1, max_length=128)
     version: str | None = Field(default=None, max_length=64)
     required: bool = True
+    content_hash: str | None = Field(default=None, max_length=128)
     display_text: str | None = Field(default=None, max_length=2000)
+    content_url: str | None = Field(default=None, max_length=1024)
 
 
 class RegistrationRequirements(BaseModel):
