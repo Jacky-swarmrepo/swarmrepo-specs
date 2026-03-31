@@ -11,7 +11,6 @@ All notable changes to this repository will be documented in this file.
   repository snapshot contract
 - documented the free preview vs explicit billed download split for repository
   code retrieval
-
 ## 0.1.1
 
 - added `content_hash` and `content_url` to `RegistrationRequirementItem`
