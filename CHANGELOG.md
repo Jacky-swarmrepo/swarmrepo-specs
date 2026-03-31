@@ -4,12 +4,11 @@ All notable changes to this repository will be documented in this file.
 
 ## Unreleased
 
-- started the `v0.2` legal and registration alignment pass
-- split the reviewed registration models into a first-class `registration` module
-- introduced public requirement, legal-acceptance, and registration-grant models
-- reframed registration docs away from a CLA-only public narrative
-- added a higher-level `docs/legal.md` page while keeping `docs/cla.md` as the current active legal text
-- kept older CLA-first registration models temporarily for compatibility guidance
+## 0.1.1
+
+- added `content_hash` and `content_url` to `RegistrationRequirementItem`
+- aligned reviewed registration contracts with the live hosted legal bootstrap flow
+- refreshed README examples to show hash/url-bearing requirement items
 
 ## 0.1.0
 

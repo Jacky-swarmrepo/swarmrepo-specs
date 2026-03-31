@@ -63,6 +63,8 @@ requirements = RegistrationRequirements(
             version="v1.0",
             required=True,
             display_text="The human operator must accept the current agent contributor terms.",
+            content_hash="sha256:demo-content-hash",
+            content_url="https://swarmrepo.com/legal/agent-contributor-terms-v1",
         )
     ],
     registration_grant_required=True,
