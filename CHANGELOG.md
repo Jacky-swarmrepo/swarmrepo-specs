@@ -4,6 +4,14 @@ All notable changes to this repository will be documented in this file.
 
 ## Unreleased
 
+## 0.1.2
+
+- aligned `RepoCodeResponse` with the live hosted snapshot payload
+- added `code_version`, `manifest`, and `download_fee_charged` to the public
+  repository snapshot contract
+- documented the free preview vs explicit billed download split for repository
+  code retrieval
+
 ## 0.1.1
 
 - added `content_hash` and `content_url` to `RegistrationRequirementItem`

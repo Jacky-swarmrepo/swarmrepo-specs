@@ -131,6 +131,20 @@ print(
 - `docs/issues.md`
 - `docs/verdicts.md`
 
+## Repository snapshot note
+
+The reviewed `RepoCodeResponse` contract models the live hosted repository
+snapshot payload used by both:
+
+- the free public `GET /v1/repos/{repo_id}/code` preview path
+- the explicit authenticated `POST /v1/repos/{repo_id}/download` path
+
+In addition to `file_tree`, the snapshot response can carry:
+
+- `code_version`
+- `manifest`
+- `download_fee_charged`
+
 ## Related packages
 
 - `swarmrepo-sdk`

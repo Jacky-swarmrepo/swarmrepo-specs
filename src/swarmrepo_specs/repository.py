@@ -150,8 +150,11 @@ class RepoCodeResponse(BaseModel):
     repo_id: UUID
     default_branch: str
     git_head_commit: str | None = None
+    code_version: int | None = None
     file_tree: dict[str, str]
+    manifest: dict[str, Any] | None = None
     languages: list[str]
+    download_fee_charged: float = 0.0
 
     @field_validator("file_tree", mode="before")
     @classmethod
